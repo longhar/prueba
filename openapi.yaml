@@ -3,6 +3,19 @@ info:
   title: Ejercicio 1 - AOS
   version: 1.0.0
   description: Ejercicio de especificación en `OpenAPI`
+servers:
+  - url: '{schema}://{servername}:{port}/api/v1'
+    description: 'AOS Server practica 1'
+    variables:
+      schema:
+        enum:
+          - http
+          - https
+        default: http
+      servername:
+        default: localhost
+      port:
+        default: '80'
 tags:
   - name: Productos
     description: Gestión de Productos
